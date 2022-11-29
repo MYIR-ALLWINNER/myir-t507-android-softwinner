@@ -1,0 +1,46 @@
+/*
+cc_library_static {
+    name: "librecovery_updater_common",
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+    ],
+
+    srcs: [
+        "recovery_updater.cpp",
+        "BurnNandBoot.cpp",
+        "BurnSdBoot.cpp",
+        "Utils.cpp",
+    ],
+
+    static_libs: [
+        "libbase",
+        "libziparchive",
+    ],
+
+}
+*/
+
+//###########################################################
+// recovery ui
+
+cc_library_static {
+    name: "librecovery_ui_common",
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+    ],
+
+    srcs: [
+        "aw_device.cpp"
+    ],
+
+    shared_libs: [
+        "librecovery_ui",
+    ],
+
+}

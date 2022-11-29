@@ -1,0 +1,67 @@
+<mixer>
+  <!-- These are the initial mixer settings -->
+
+  <!-- These are commonly used control sequences -->
+  <path name="ahub-daudio0-input">
+    <ctl name="I2S0IN Switch" value="1" />
+    <ctl name="APBIF0 Src Select" value="I2S0_TXDIF" />
+  </path>
+
+  <path name="ahub-daudio1-output">
+    <ctl name="I2S1OUT Switch" value="1" />
+    <ctl name="I2S1 Src Select" value="APBIF_TXDIF0" />
+  </path>
+
+  <path name="ahub-daudio2-input">
+    <ctl name="I2S2IN Switch" value="1" />
+    <ctl name="APBIF2 Src Select" value="I2S2_TXDIF" />
+  </path>
+
+  <path name="ahub-daudio2-output">
+    <ctl name="I2S2OUT Switch" value="1" />
+    <ctl name="I2S2 Src Select" value="APBIF_TXDIF2" />
+  </path>
+
+  <path name="ahub-daudio3-input">
+    <ctl name="I2S3IN Switch" value="1" />
+    <ctl name="APBIF1 Src Select" value="I2S3_TXDIF" />
+  </path>
+
+  <path name="ahub-daudio3-output">
+    <ctl name="I2S3OUT Switch" value="1" />
+    <ctl name="I2S3 Src Select" value="APBIF_TXDIF1" />
+  </path>
+
+  <path name="ahub-daudio0-input-close">
+    <ctl name="I2S0IN Switch" value="0" />
+    <ctl name="APBIF0 Src Select" value="NONE" />
+  </path>
+
+  <path name="ahub-daudio1-output-close">
+    <ctl name="I2S1OUT Switch" value="0" />
+    <ctl name="I2S1 Src Select" value="NONE" />
+  </path>
+
+  <path name="ahub-daudio2-input-close">
+    <ctl name="I2S2IN Switch" value="0" />
+    <ctl name="APBIF2 Src Select" value="NONE" />
+  </path>
+
+  <path name="ahub-daudio2-output-close">
+    <ctl name="I2S2OUT Switch" value="0" />
+    <ctl name="I2S2 Src Select" value="NONE" />
+  </path>
+
+  <path name="ahub-daudio3-input-close">
+    <ctl name="I2S3IN Switch" value="0" />
+    <ctl name="APBIF1 Src Select" value="NONE" />
+  </path>
+
+  <path name="ahub-daudio3-output-close">
+    <ctl name="I2S3OUT Switch" value="0" />
+    <ctl name="I2S3 Src Select" value="NONE" />
+  </path>
+
+  <path name="null">
+  </path>
+</mixer>

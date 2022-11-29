@@ -1,0 +1,1 @@
+persist.logd.filter=~! ~1013 ~1000/!

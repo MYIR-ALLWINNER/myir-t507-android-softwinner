@@ -1,0 +1,2 @@
+allow fastbootd sysfs:dir open;
+allow fastbootd sysfs_batteryinfo:dir search;

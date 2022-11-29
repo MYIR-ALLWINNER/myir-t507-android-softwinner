@@ -1,0 +1,16 @@
+media.boost.pref                      u:object_r:system_prop:s0
+persist.display.                      u:object_r:system_prop:s0
+os.aot.path                           u:object_r:system_prop:s0
+battery.present                       u:object_r:system_prop:s0
+
+## property for mediaserver
+mediasw.doublestream                  u:object_r:system_prop:s0
+mediasw.stopscaner                    u:object_r:system_prop:s0
+mediasw.stopdeinterlace               u:object_r:system_prop:s0
+
+
+
+
+
+
+

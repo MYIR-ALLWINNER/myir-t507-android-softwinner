@@ -1,0 +1,12 @@
+allow system_app { cache_file cache_recovery_file }:dir create_dir_perms;
+allow system_app { cache_file cache_recovery_file }:file create_file_perms;
+allow system_app unlabeled:filesystem getattr;
+allow system_app fs_bpf:dir search;
+allow system_app vendor_default_prop:file { open getattr read };
+allow system_app sysfs_extcon:dir { search read };
+allow system_app cedar_device:chr_file { open read write ioctl };
+allow system_app proc_bootevent:file { open write getattr };
+allow system_app sst_storage_device:chr_file {open read ioctl};
+allow system_app systemmix:binder call;
+allow appdomain systemmix:binder call;
+allow platform_app systemmix:binder call;

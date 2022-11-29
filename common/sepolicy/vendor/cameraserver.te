@@ -1,0 +1,18 @@
+allow cameraserver hal_allocator_server:fd use;
+allow cameraserver cedar_device:chr_file { ioctl open read write };
+allow cameraserver graphics_device:chr_file {ioctl open read write};
+allow cameraserver audio_service:service_manager {find};
+allow cameraserver tmpfs:lnk_file {read};
+allow cameraserver storage_file:lnk_file {read};
+allow cameraserver storage_file:dir {search};
+allow cameraserver mnt_user_file:dir {search};
+allow cameraserver mnt_user_file:lnk_file {read};
+allow cameraserver sdcardfs:dir {search write open read add_name};
+allow cameraserver sdcardfs:file {open read write create getattr setattr};
+allow cameraserver media_rw_data_file:file {open read write create setattr getattr};
+allow cameraserver media_rw_data_file:dir {search write open read add_name};
+allow cameraserver gpu_device:chr_file {ioctl open read write};
+allow cameraserver hal_configstore_default:binder {call};
+allow cameraserver gpu_device:chr_file {getattr};
+allow cameraserver vfat:dir {search read open write add_name};
+allow cameraserver vfat:file {open read write create getattr setattr};

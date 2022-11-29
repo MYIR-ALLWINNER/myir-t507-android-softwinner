@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- HTTP URL for network validation, to use for detecting captive portals. -->
+    <string name="default_captive_portal_http_url">http://www.google.cn/generate_204</string>
+
+    <!-- HTTPS URL for network validation, to use for confirming internet connectivity. -->
+    <string name="default_captive_portal_https_url">https://www.google.cn/generate_204</string>
+</resources>

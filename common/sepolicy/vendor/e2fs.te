@@ -1,0 +1,12 @@
+allow e2fs cache_block_device:blk_file { getattr ioctl open read write };
+allow e2fs sdcard_block_device:blk_file { getattr ioctl open read write };
+allow e2fs userdata_block_device:blk_file  { getattr ioctl read write };
+allow e2fs devpts:chr_file { getattr ioctl read write };
+allow e2fs sysfs_fs_ext4_features:dir search;
+allow e2fs system_block_device:blk_file getattr;
+allow e2fs dm_device:blk_file getattr;
+allowxperm e2fs { cache_block_device sdcard_block_device }:blk_file ioctl {
+  BLKSECDISCARD BLKDISCARD BLKPBSZGET BLKDISCARDZEROES BLKROGET
+};
+allow e2fs unlabeled:dir search;
+allowxperm e2fs { userdata_block_device metadata_block_device dm_device }:blk_file ioctl BLKGETSIZE;

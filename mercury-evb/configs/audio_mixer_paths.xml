@@ -1,0 +1,141 @@
+<mixer>
+    <!-- These are the initial mixer settings -->
+    <ctl name="Headphone Switch" value="0" />
+
+    <!-- These are commonly used control sequences -->
+    <path name="media-headphones">
+        <ctl name="Right Output Mixer DACR Switch" value="1" />
+        <ctl name="Left Output Mixer DACL Switch" value="1" />
+        <ctl name="HPR Mux" value="DAC" />
+        <ctl name="HPL Mux" value="DAC" />
+        <ctl name="Headphone Switch" value="1" />
+    </path>
+
+    <path name="media-single-speaker">
+        <ctl name="Right Output Mixer DACR Switch" value="1" />
+        <ctl name="Left Output Mixer DACL Switch" value="1" />
+        <ctl name="Headphone Switch" value="1" />
+        <ctl name="Speaker Switch" value="1" />
+    </path>
+
+    <path name="media-headphones-close">
+        <ctl name="Right Output Mixer DACR Switch" value="0" />
+        <ctl name="Left Output Mixer DACL Switch" value="0" />
+        <ctl name="Headphone Switch" value="0" />
+    </path>
+
+    <path name="media-phoneout">
+        <ctl name="Phone Out Mixer LOMIX Switch" value="1" />
+        <ctl name="Phone Out Mixer ROMIX Switch" value="1" />
+        <ctl name="Right Output Mixer DACR Switch" value="1" />
+        <ctl name="Left Output Mixer DACL Switch" value="1" />
+        <ctl name="Phoneout Speaker Switch" value="1" />
+    </path>
+
+    <path name="media-phoneout-close">
+        <ctl name="Phone Out Mixer LOMIX Switch" value="0" />
+        <ctl name="Phone Out Mixer ROMIX Switch" value="0" />
+        <ctl name="Right Output Mixer DACR Switch" value="0" />
+        <ctl name="Left Output Mixer DACL Switch" value="0" />
+        <ctl name="Phoneout Speaker Switch" value="0" />
+    </path>
+
+    <path name="media-output-close">
+        <path name="media-headphones-close" />
+        <path name="media-phoneout-close" />
+    </path>
+
+    <!-- for T3, mic1 Left + mic1 Right -->
+    <path name="media-main-mic">
+        <ctl name="Left Input Mixer MIC1 Boost Switch" value="1" />
+        <ctl name="Right Input Mixer MIC1 Boost Switch" value="1" />
+    </path>
+
+    <path name="media-main-mic-close">
+        <ctl name="Left Input Mixer MIC1 Boost Switch" value="0" />
+        <ctl name="Right Input Mixer MIC1 Boost Switch" value="0" />
+    </path>
+
+    <path name="media-fmin">
+        <ctl name="Left Input Mixer FML Switch" value="1" />
+        <ctl name="Right Input Mixer FMR Switch" value="1" />
+    </path>
+
+    <path name="media-fmin-close">
+        <ctl name="Left Input Mixer FML Switch" value="0" />
+        <ctl name="Right Input Mixer FMR Switch" value="0" />
+    </path>
+
+    <path name="media-linein">
+        <ctl name="Left Input Mixer LINEINL Switch" value="1" />
+        <ctl name="Right Input Mixer LINEINR Switch" value="1" />
+    </path>
+
+    <path name="media-linein-close">
+        <ctl name="Left Input Mixer LINEINL Switch" value="0" />
+        <ctl name="Right Input Mixer LINEINR Switch" value="0" />
+    </path>
+
+    <path name="media-input-close">
+        <path name="media-main-mic-close" />
+        <path name="media-fmin-close" />
+        <path name="media-linein-close" />
+    </path>
+
+    <!-- analog to analog route -->
+    <path name="media-linein-phoneout">
+        <ctl name="HPL Mux" value="OMIX" />
+        <ctl name="HPR Mux" value="OMIX" />
+        <ctl name="Phone Out Mixer ROMIX Switch" value="1" />
+        <ctl name="Phone Out Mixer ROMIX Switch" value="1" />
+        <ctl name="Right Output Mixer LINEINR Switch" value="1" />
+        <ctl name="Left Output Mixer LINEINL Switch" value="1" />
+        <ctl name="Phoneout Speaker Switch" value="1" />
+    </path>
+
+    <path name="media-linein-phoneout-close">
+        <ctl name="HPL Mux" value="DAC" />
+        <ctl name="HPR Mux" value="DAC" />
+        <ctl name="Phone Out Mixer ROMIX Switch" value="0" />
+        <ctl name="Phone Out Mixer ROMIX Switch" value="0" />
+        <ctl name="Right Output Mixer LINEINR Switch" value="0" />
+        <ctl name="Left Output Mixer LINEINL Switch" value="0" />
+        <ctl name="Phoneout Speaker Switch" value="0" />
+    </path>
+
+    <path name="media-linein-hpout">
+        <ctl name="HPL Mux" value="OMIX" />
+        <ctl name="HPR Mux" value="OMIX" />
+        <ctl name="Right Output Mixer LINEINR Switch" value="1" />
+        <ctl name="Left Output Mixer LINEINL Switch" value="1" />
+        <ctl name="Headphone Switch" value="1" />
+    </path>
+
+    <path name="media-linein-hpout-close">
+        <ctl name="HPL Mux" value="DAC" />
+        <ctl name="HPR Mux" value="DAC" />
+        <ctl name="Right Output Mixer LINEINR Switch" value="0" />
+        <ctl name="Left Output Mixer LINEINL Switch" value="0" />
+        <ctl name="Headphone Switch" value="0" />
+    </path>
+
+    <!-- loopback route, return output mix to intput mix -->
+    <path name="media-Omix-Imix">
+        <path name="media-main-mic" />
+        <ctl name="Right Input Mixer LOMIX Switch" value="1" />
+    </path>
+
+    <path name="media-Omix-Imix-close">
+        <path name="media-main-mic-close" />
+        <ctl name="Right Input Mixer LOMIX Switch" value="0" />
+    </path>
+
+    <path name="media-aa-route-close">
+        <path name="media-linein-phoneout-close" />
+        <path name="media-linein-hpout-close" />
+        <path name="media-Omix-Imix-close" />
+    </path>
+
+    <path name="null">
+    </path>
+</mixer>

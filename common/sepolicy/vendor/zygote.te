@@ -1,0 +1,1 @@
+allow zygote proc_bootevent:file { write open getattr };

@@ -1,0 +1,46 @@
+<mixer>
+  <!-- These are the initial mixer settings -->
+  <ctl name="LINEOUT volume" value="31" />
+  <ctl name="Left LINEOUT Mux" value="LOMixer" />
+  <ctl name="Right LINEOUT Mux" value="ROMixer" />
+
+  <!-- These are commonly used control sequences -->
+  <path name="codec-lineout">
+    <ctl name="LINEOUT Switch" value="1" />
+    <ctl name="Right Output Mixer DACR Switch" value="1" />
+    <ctl name="Left Output Mixer DACL Switch" value="1" />
+  </path>
+
+  <path name="codec-lineout-close">
+    <ctl name="LINEOUT Switch" value="0" />
+    <ctl name="Right Output Mixer DACR Switch" value="0" />
+    <ctl name="Left Output Mixer DACL Switch" value="0" />
+  </path>
+
+  <path name="codec-linein-lineout">
+    <ctl name="LINEOUT Switch" value="1" />
+    <ctl name="Right Output Mixer LINEINR Switch" value="1" />
+    <ctl name="Left Output Mixer LINEINL Switch" value="1" />
+  </path>
+
+  <path name="codec-linein-lineout-close">
+    <ctl name="LINEOUT Switch" value="0" />
+    <ctl name="Right Output Mixer LINEINR Switch" value="0" />
+    <ctl name="Left Output Mixer LINEINL Switch" value="0" />
+  </path>
+
+  <path name="codec-fmin-lineout">
+    <ctl name="LINEOUT Switch" value="1" />
+    <ctl name="Left Output Mixer FMINL Switch" value="1" />
+    <ctl name="Right Output Mixer FMINR Switch" value="1" />
+  </path>
+
+  <path name="codec-fmin-lineout-close">
+    <ctl name="LINEOUT Switch" value="0" />
+    <ctl name="Left Output Mixer FMINL Switch" value="0" />
+    <ctl name="Right Output Mixer FMINR Switch" value="0" />
+  </path>
+
+  <path name="null">
+  </path>
+</mixer>
